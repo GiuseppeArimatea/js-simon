@@ -19,7 +19,7 @@ alert('memorizza questi numeri: ' + numeriRandom); // creo alert con i numeri da
 
 var numeriUtente = []; // creo array vuoto per i numeri dell utente
 
-var countdown = setTimeout(playGame,10); // aspetto 30 secondi e poi passo a funzione Playgame
+var countdown = setTimeout(playGame,30000); // aspetto 30 secondi e poi passo a funzione Playgame
 
 
 function playGame() {

@@ -17,32 +17,20 @@ alert('memorizza questi numeri: ' + numeriRandom); // creo alert con i numeri da
 
 
 
+
+var countdown = setTimeout(playGame,100); // aspetto 30 secondi e poi passo a funzione Playgame
+
 var numeriUtente = []; // creo array vuoto per i numeri dell utente
-
-var countdown = setTimeout(playGame,30000); // aspetto 30 secondi e poi passo a funzione Playgame
-
 
 function playGame() {
   alert('sono passati 30 secondi');
-  while (numeriUtente.length < 5) { //chiedo 5 numeri
-      var inserisciNumeroUtente = parseInt(prompt('inserisci il numero'));
-      if (numeriUtente.includes(inserisciNumeroUtente)) { 
+  for (var i = 0; i < 5; i++) {
+      var inserisciNumeroUtente = parseInt(prompt('inserisci il numero' + (i + 1)));
+      if (numeriRandom.includes(inserisciNumeroUtente)) {
         numeriUtente.push(inserisciNumeroUtente); // pusho in array numeriutente
       }
     }
-    alert('hai inserito i n. ' + numeriUtente); // stampo i numeri che ho inserito
-
-   var trovati = 0; // creo variabile che conta quanti numeri ho trovato
-   var numeriTrovati = []; // creo array numeriTrovati
-
-   for (var i = 0; i < numeriRandom.length; i++) { // attraverso array numeriRandom
-     if (numeriRandom.includes(numeriUtente[i])) {  // Il metodo includes() determina se un array include un certo elemento
-       trovati++; // se numeriRandom trova delle coppie con numeriUtente aumento Variabile trovati  e pusho in numeriTrovati e stampo tramite Alert
-       numeriTrovati.push(numeriUtente[i]);
-       console.log(numeriTrovati);
-     }
-   }
-   return alert('Ne hai trovati ' + trovati +'! i numeri sono: ' + '' + numeriTrovati)
+    alert(numeriUtente + ' hai indvinato ' + numeriUtente.length + ' numeri'); // stampo i numeri che ho inserito
 }
 
 

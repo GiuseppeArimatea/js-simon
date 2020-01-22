@@ -26,9 +26,7 @@ function playGame() {
   alert('sono passati 30 secondi');
   while (numeriUtente.length < 5) { //chiedo 5 numeri
       var inserisciNumeroUtente = parseInt(prompt('inserisci il numero'));
-      if (numeriUtente.includes(inserisciNumeroUtente)) { // mi assicuro che i numeri non sono uguali
-        alert('non puoi inserire due numeri uguali');
-      } else {
+      if (numeriUtente.includes(inserisciNumeroUtente)) { 
         numeriUtente.push(inserisciNumeroUtente); // pusho in array numeriutente
       }
     }
